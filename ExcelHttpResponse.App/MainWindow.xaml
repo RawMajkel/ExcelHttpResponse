@@ -1,0 +1,43 @@
+﻿<Window x:Class="ExcelHttpResponse.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="ExcelHttpResponse" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="0.5*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="2.2*" />
+                </Grid.ColumnDefinitions>
+                <DockPanel Grid.Row="1" Grid.Column="0" Background="#212121">
+                    <WrapPanel Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Foreground="#fff" FontSize="20" Padding="25 15" FontWeight="Bold" Background="#008348" Name="sendXlsx" Click="sendXlsx_Click">Wybierz plik</Button>
+                    </WrapPanel>
+                </DockPanel>
+                <DockPanel Grid.Row="1" Grid.Column="1" Background="#212121">
+                    <Border Background="#aaa" Width="0.5" HorizontalAlignment="Left"></Border>
+                    <TextBlock Margin="40" Foreground="#fff" FontSize="18" FontWeight="Bold" LineHeight="30" VerticalAlignment="Center">
+                        1. Przygotuj plik .xlsx z adresami URL w kolumnie A <LineBreak />
+                        2. Upewnij się, że plik zamknąłeś Excela <LineBreak />
+                        3. Wybierz plik w aplikacji <LineBreak />
+                        4. Gotowe!
+                    </TextBlock>
+                </DockPanel>
+            </Grid>
+            <DockPanel Background="#121212" Grid.Row="0" Grid.Column="0">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Foreground="#fff" FontSize="35" FontWeight="Bold">Excel Http Response</TextBlock>
+            </DockPanel>
+            <DockPanel Grid.Row="2" Grid.Column="0" Background="#181818">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#ddd" FontSize="12">Copyrights 2021 | inż. Michał Droździk 2021</TextBlock>
+            </DockPanel>
+        </Grid>
+    </Grid>
+</Window>
